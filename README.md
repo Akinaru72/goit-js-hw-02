@@ -55,8 +55,6 @@ The function takes three parameters:
    - otherwise, return  
      `"You ordered <quantity> droids worth <totalPrice> credits!"`.
 
----
-
 ### Test Code
 
 ```js
@@ -80,6 +78,8 @@ console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 500
   `"Insufficient funds!"`
 - Calling `makeTransaction(10, 500, 5000)` returns  
   `"You ordered 10 droids worth 5000 credits!"`
+
+---
 
 ## Task 2. Message Formatting
 
@@ -117,9 +117,6 @@ console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // 
 
 ---
 
-### English version
-
-````markdown
 ## Task 3. Spam Check
 
 ### Execution
@@ -153,6 +150,8 @@ console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 - Calling `checkForSpam("Trust me, this is not a spam message")` returns `true`
 - Calling `checkForSpam("Get rid of sPaM emails. Our book in on sale!")` returns `true`
 - Calling `checkForSpam("[SPAM] How to earn fast money?")` returns `true`
+
+---
 
 ## Task 4. Shipping Cost
 
@@ -202,4 +201,3 @@ Leave this code for mentor review.
 ---
 
 **Live page: [GitHub Pages](https://akinaru72.github.io/goit-js-hw-02/)**
-````

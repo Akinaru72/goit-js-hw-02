@@ -55,8 +55,6 @@
    - інакше — поверни рядок  
      `"You ordered <quantity> droids worth <totalPrice> credits!"`.
 
----
-
 ### Код для перевірки
 
 ```js
@@ -117,6 +115,8 @@ console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // 
 - Виклик `formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)` повертає `"Nunc sed turpis..."`
 - Виклик `formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)` повертає `"Nunc sed turpis a felis in nunc fringilla"`
 
+---
+
 ## Задача 3. Перевірка спаму
 
 ### Виконання
@@ -150,6 +150,8 @@ console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
 - Виклик функції `checkForSpam("Trust me, this is not a spam message")` повертає `true`
 - Виклик функції `checkForSpam("Get rid of sPaM emails. Our book in on sale!")` повертає `true`
 - Виклик функції `checkForSpam("[SPAM] How to earn fast money?")` повертає `true`
+
+---
 
 ## Задача 4. Доставка товару
 
