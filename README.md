@@ -1,101 +1,139 @@
-goit-js-hw-02
+# Homework №2
 
-Домашнє завдання №2
+## JavaScript. Branching and Logical Operators
 
-Створи репозиторій goit-js-hw-02 та склонюй його собі на комп’ютер.
-У папці goit-js-hw-02 створи структуру проєкта, як показано на схемі нижче.
+---
 
-Зверни увагу! Імена файлів та папок, а також їх структура вкладеності, мають відповідати вказаній схемі. В іншому разі робота не буде прийнята.
+## Instructions
 
-Прочитай кожне завдання і виконай його у відповідному файлі.
-Переконайся, що код відформатований за допомогою Prettier, а в консолі відсутні помилки і попередження під час відкриття живої сторінки завдання.
-Здай домашнє завдання на перевірку.
+- Create a repository **goit-js-hw-02** and clone it to your computer.
+- In the `goit-js-hw-02` folder, create the project structure according to the scheme in the task.
 
-Формат здачі: Домашня робота містить два посилання: на вихідні файли і робочу сторінку на GitHub Pages.
+⚠️ **Attention!**  
+File and folder names, as well as the nesting structure, must **exactly match** the requirements. Otherwise, the homework will not be accepted.
 
-Задача 1. Замовлення дроїдів
+![Project preview](assets/homework-js-2.jpg)
 
-Виконуй це завдання у файлі task-1.js
+- Read each task carefully and complete it in the corresponding file.
+- Make sure the code is formatted using **Prettier**.
+- When opening the live page, there should be no errors or warnings in the console.
+- Submit the homework for review.
 
-Станція з продажу ремонтних дроїдів готова до запуску, залишилося написати програмне забезпечення для відділу продажів. Оголоси функцію makeTransaction(quantity, pricePerDroid, customerCredits), яка складає та повертає повідомлення про купівлю ремонтних дроїдів.
+---
 
-Вона оголошує три параметри, значення яких будуть задаватися під час її виклику:
+## Submission Format
 
-quantity — кількість замовлених дроїдів
-pricePerDroid — ціна одного дроїда
-customerCredits — сума коштів на рахунку клієнта
+The homework must include **two links**:
 
-Доповни функцію таким чином:
+- a link to the source files (repository with the code);
+- a link to the live page on **GitHub Pages**.
 
-Оголоси змінну для зберігання загальної суми замовлення (загальна вартість усіх замовлених дроїдів) і задай їй вираз розрахунку цієї суми.
-Додай перевірку, чи зможе клієнт оплатити замовлення:
-якщо сума до сплати перевищує кількість кредитів на рахунку клієнта, функція має повертати рядок "Insufficient funds!"
-в іншому випадку функція має повертати рядок "You ordered <quantity> droids worth <totalPrice> credits!", де <quantity> це кількість замовлених дроїдів, а <totalPrice> це їх загальна вартість.
+---
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+## Task 1. Droid Order
 
+**File:** `task-1.js`
+
+The repair droid sales station is ready to launch — all that’s left is to write the software for the sales department.
+
+### Task Description
+
+Declare a function `makeTransaction(quantity, pricePerDroid, customerCredits)` that creates and returns a message about purchasing repair droids.
+
+The function takes three parameters:
+
+- `quantity` — the number of ordered droids;
+- `pricePerDroid` — the price of one droid;
+- `customerCredits` — the amount of credits in the customer’s account.
+
+### Function Logic
+
+1. Declare a variable to store the **total order cost** and calculate its value.
+2. Add a check to determine whether the customer can pay for the order:
+   - if the total cost exceeds the customer’s credits, return  
+     `"Insufficient funds!"`;
+   - otherwise, return  
+     `"You ordered <quantity> droids worth <totalPrice> credits!"`.
+
+---
+
+### Test Code
+
+```js
 console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
 console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
 console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
 console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
 console.log(makeTransaction(10, 500, 5000)); // "You ordered 10 droids worth 5000 credits!"
+```
 
-Залиш цей код для перевірки ментором.
+## What the mentor will check during the review
 
-На що буде звертати увагу ментор при перевірці:
+- The function `makeTransaction(quantity, pricePerDroid, customerCredits)` is declared
+- Calling `makeTransaction(5, 3000, 23000)` returns  
+  `"You ordered 5 droids worth 15000 credits!"`
+- Calling `makeTransaction(3, 1000, 15000)` returns  
+  `"You ordered 3 droids worth 3000 credits!"`
+- Calling `makeTransaction(10, 5000, 8000)` returns  
+  `"Insufficient funds!"`
+- Calling `makeTransaction(8, 2000, 10000)` returns  
+  `"Insufficient funds!"`
+- Calling `makeTransaction(10, 500, 5000)` returns  
+  `"You ordered 10 droids worth 5000 credits!"`
 
-Оголошена функція makeTransaction(quantity, pricePerDroid, customerCredits)
-Виклик makeTransaction(5, 3000, 23000) повертає "You ordered 5 droids worth 15000 credits!"
-Виклик makeTransaction(3, 1000, 15000) повертає "You ordered 3 droids worth 3000 credits!"
-Виклик makeTransaction(10, 5000, 8000) повертає "Insufficient funds!"
-Виклик makeTransaction(8, 2000, 10000) повертає "Insufficient funds!"
-Виклик makeTransaction(10, 500, 5000) повертає "You ordered 10 droids worth 5000 credits!"
+## Task 2. Message Formatting
 
-Задача 2. Форматування повідомлення
+**File:** `task-2.js`
 
-Виконуй це завдання у файлі task-2.js
+Work on this task in the file `task-2.js`.
 
-Оголоси функцію formatMessage(message, maxLength), яка приймає рядок (параметр message) та перевіряє його довжину відповідно до заданої максимальної довжини (параметр maxLength).
+Declare a function `formatMessage(message, maxLength)` that accepts a string (`message`) and checks its length against the specified maximum length (`maxLength`).
 
-Доповни код функції таким чином, що:
+### Function Logic
 
-Якщо довжина рядка дорівнює або менша за maxLength, то функція повертає початковий рядок без змін.
-Якщо довжина перевищує maxLength, то функція обрізає рядок до maxLength символів, додає трикрапку "..." в кінці та повертає обрізану версію.
+- If the string length is less than or equal to `maxLength`, the function should return the original string unchanged.
+- If the string length exceeds `maxLength`, the function should truncate the string to `maxLength` characters, add an ellipsis `"..."` at the end, and return the truncated version.
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+### Test Code
 
+```js
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
 console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
 console.log(formatMessage("Vestibulum facilisis purus nec", 20)); // "Vestibulum facilisis..."
 console.log(formatMessage("Vestibulum facilisis purus nec", 30)); // "Vestibulum facilisis purus nec"
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)); // "Nunc sed turpis..."
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // "Nunc sed turpis a felis in nunc fringilla"
+```
 
-Залиш цей код для перевірки ментором.
+## Mentor Checkpoints
 
-На що буде звертати увагу ментор при перевірці:
+- Function `formatMessage(message, maxLength)` is declared
+- Calling `formatMessage("Curabitur ligula sapien", 16)` returns `"Curabitur ligula..."`
+- Calling `formatMessage("Curabitur ligula sapien", 23)` returns `"Curabitur ligula sapien"`
+- Calling `formatMessage("Vestibulum facilisis purus nec", 20)` returns `"Vestibulum facilisis..."`
+- Calling `formatMessage("Vestibulum facilisis purus nec", 30)` returns `"Vestibulum facilisis purus nec"`
+- Calling `formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)` returns `"Nunc sed turpis..."`
+- Calling `formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)` returns `"Nunc sed turpis a felis in nunc fringilla"`
 
-Оголошена функція formatMessage(message, maxLength)
-Виклик функції formatMessage("Curabitur ligula sapien", 16) повертає "Curabitur ligula..."
-Виклик функції formatMessage("Curabitur ligula sapien", 23) повертає "Curabitur ligula sapien"
-Виклик функції formatMessage("Vestibulum facilisis purus nec", 20) повертає "Vestibulum facilisis..."
-Виклик функції formatMessage("Vestibulum facilisis purus nec", 30) повертає "Vestibulum facilisis purus nec"
-Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 15) повертає "Nunc sed turpis..."
-Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 41) повертає "Nunc sed turpis a felis in nunc fringilla"
+---
 
-Задача 3. Перевірка спаму
+### English version
 
-Виконуй це завдання у файлі task-3.js
+````markdown
+## Task 3. Spam Check
 
-Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути в довільному регістрі, наприклад SPAM або sAlE.
+### Execution
 
-Доповни код функції таким чином, що:
+The function `checkForSpam(message)` takes a string (`message`), checks it for forbidden words `spam` and `sale`, and returns the check result. Words can be in any case, e.g., `SPAM` or `sAlE`.
 
-Якщо знайдено заборонене слово (spam або sale), то функція повертає буль true
-Якщо в рядку відсутні заборонені слова, функція повертає буль false
+### Function logic
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+- If a forbidden word (`spam` or `sale`) is found, the function returns `true`
+- If there are no forbidden words, the function returns `false`
 
+### Test code
+
+```js
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
 console.log(checkForSpam("Get best sale offers now!")); // true
@@ -103,56 +141,65 @@ console.log(checkForSpam("Amazing SalE, only tonight!")); // true
 console.log(checkForSpam("Trust me, this is not a spam message")); // true
 console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
 console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+```
 
-Залиш цей код для перевірки ментором.
+### Mentor Checkpoints
 
-На що буде звертати увагу ментор при перевірці:
+- Function `checkForSpam(message)` is declared
+- Calling `checkForSpam("Latest technology news")` returns `false`
+- Calling `checkForSpam("JavaScript weekly newsletter")` returns `false`
+- Calling `checkForSpam("Get best sale offers now!")` returns `true`
+- Calling `checkForSpam("Amazing SalE, only tonight!")` returns `true`
+- Calling `checkForSpam("Trust me, this is not a spam message")` returns `true`
+- Calling `checkForSpam("Get rid of sPaM emails. Our book in on sale!")` returns `true`
+- Calling `checkForSpam("[SPAM] How to earn fast money?")` returns `true`
 
-Оголошена функція checkForSpam(message).
-Виклик функції checkForSpam("Latest technology news") повертає false
-Виклик функції checkForSpam("JavaScript weekly newsletter")повертає false
-Виклик функції checkForSpam("Get best sale offers now!") повертає true
-Виклик функції checkForSpam("Amazing SalE, only tonight!") повертає true
-Виклик функції checkForSpam("Trust me, this is not a spam message") повертає true
-Виклик функції checkForSpam("Get rid of sPaM emails. Our book in on sale!") повертає true
-Виклик функції checkForSpam("[SPAM] How to earn fast money?") повертає true
+## Task 4. Shipping Cost
 
-Задача 4. Доставка товару
+**File:** `task-4.js`
 
-Виконуй це завдання у файлі task-4.js
+Declare the function `getShippingCost(country)` which checks whether shipping to the user's country (`country`) is possible and returns a message about the result. Use a `switch` statement.
 
-Оголоси функцію getShippingCost(country), яка повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат. Обов'язково використовуй інструкцію switch.
+### Returned string format:
 
-Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price> необхідно підставити відповідні значення.
+"Shipping to <country> will cost <price> credits"
 
-Список країн і вартість доставки:
+where `<country>` and `<price>` are replaced with the appropriate values.
 
-China — 100 кредитів
-Chile — 250 кредитів
-Australia — 170 кредитів
-Jamaica — 120 кредитів
+### List of countries and shipping costs
 
-Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country".
+- China — 100 credits
+- Chile — 250 credits
+- Australia — 170 credits
+- Jamaica — 120 credits
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+From the list, it is clear that shipping is not available everywhere. If the specified country is not on the list, the function should return:
 
+Insert the code below after declaring your function to test its correctness. The console will display the results of the function calls.
+
+```js
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
 console.log(getShippingCost("Germany")); // "Sorry, there is no delivery to your country"
 console.log(getShippingCost("China")); // "Shipping to China will cost 100 credits"
 console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
 console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
 console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
+```
 
-Залиш цей код для перевірки ментором.
+Leave this code for mentor review.
 
-На що буде звертати увагу ментор при перевірці:
+## What the mentor will check:
 
-Оголошена функція getShippingCost(country)
-У тілі функції використана інструкція switch
-Виклик getShippingCost("Australia") повертає "Shipping to Australia will cost 170 credits"
-Виклик getShippingCost("Germany") повертає "Sorry, there is no delivery to your country"
-Виклик getShippingCost("China") повертає "Shipping to China will cost 100 credits"
-Виклик getShippingCost("Chile") повертає "Shipping to Chile will cost 250 credits"
-Виклик getShippingCost("Jamaica") повертає "Shipping to Jamaica will cost 120 credits"
-Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
+- The function `getShippingCost(country)` is declared
+- The function body uses a `switch` statement
+- `getShippingCost("Australia")` returns "Shipping to Australia will cost 170 credits"
+- `getShippingCost("Germany")` returns "Sorry, there is no delivery to your country"
+- `getShippingCost("China")` returns "Shipping to China will cost 100 credits"
+- `getShippingCost("Chile")` returns "Shipping to Chile will cost 250 credits"
+- `getShippingCost("Jamaica")` returns "Shipping to Jamaica will cost 120 credits"
+- `getShippingCost("Sweden")` returns "Sorry, there is no delivery to your country"
 
+---
+
+**Live page: [GitHub Pages](https://akinaru72.github.io/goit-js-hw-02/)**
+````
